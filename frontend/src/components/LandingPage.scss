@@ -1,0 +1,18 @@
+.landingPage-conteiner {
+    margin: 50px auto;
+    color: #ffffff;
+    h1 {
+        text-align: center;
+        text-wrap: balance;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing effect */
+    }
+
+    p {
+        text-align: center;
+        text-wrap: balance;
+        font-size: 20px;
+        margin: 2px 0;
+    }
+}
