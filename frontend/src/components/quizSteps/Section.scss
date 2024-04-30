@@ -1,0 +1,121 @@
+.option-container {
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin: 10px auto;
+    padding: 12px;
+    width: 70%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    box-shadow: rgba(154, 153, 153, 0.16) 0px 3px 6px, rgba(154, 153, 153, 0.16) 0px 3px 6px;
+    i {
+        position: relative;
+        top: 6px;
+        left: 6px;
+    }
+    &:hover {
+        background-color: #c2c2c244;
+        color: #fff;
+        border: 2px solid transparent;
+    }
+}
+.selected {
+    background-color: #47bf136f;
+    color: #fff;
+    border: 2px solid var(--primary);
+}
+
+//----------------------------------------------
+.rating-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    width: 300px; /* Adjust width as needed */
+    margin: 10vh 0;
+    label {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .progress-inOut {
+        display: flex;
+        flex-direction: row;
+    }
+    .progressOutput {
+        margin-left: 3vw;
+        font-size: 17px; /* Adjust font size as needed */
+        font-weight: bold;
+        color: #fff; /* Text color */
+        margin-top: -7px;
+      }
+}
+
+  
+  /* Progress bar */
+  .progress-container input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px; 
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    outline: none;
+  }
+  
+  /* Progress bar fill */
+  .progress-container input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px; 
+    border-radius: 5px;
+    background-color: #fafafa; 
+  }
+  
+  /* Progress bar thumb */
+  .progress-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+    background-color: var(--primary); 
+    cursor: pointer;
+    margin-top: -5px; 
+  }
+//----------------------------------------------
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+    .option-container {
+        font-size: 16px; 
+        border-color: #fff;
+        color: #fff;
+        width: 90%;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .option-container {
+        font-size: 18px; 
+        border-color: #fff;
+        color: #fff;
+        
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .option-container {
+        font-size: 20px; 
+        border-color: #fff;
+        color: #fff;
+    }
+}
+
+/* Large Desktop Styles */
+@media only screen and (min-width: 1200px) {
+    .option-container {
+        font-size: 22px; 
+        border-color: #fff;
+        color: #fff;
+    }
+}

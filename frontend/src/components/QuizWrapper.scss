@@ -1,0 +1,13 @@
+.wraper {
+
+    &-title {
+        text-align: center;
+        text-wrap: balance;
+        margin: 15px 0 30px 0;
+    }
+    &-section {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,22 @@
+.quiz-container {
+    
+    .quiz-button {
+        background-color: var(--primary);
+        border: none;
+        color: #fff;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        margin: 0 auto;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 30px;
+        &:hover {
+            background-color: #C3070F; /* Darker Red */
+            transform: translateY(-2px); /* Move button up slightly on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover for depth */
+        }
+    }
+}

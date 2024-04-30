@@ -20,8 +20,6 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Quiz />} /> 
 
-      <Route path='/aboutus' element={<AboutUs />} />
-
       <Route path='citylist/' element={<CitiesListLayout />} >
         <Route 
           index 
@@ -33,6 +31,8 @@ const router = createBrowserRouter(
           element={<CityDetail />}
           />
       </Route>
+
+      <Route path='/aboutus' element={<AboutUs />} />
 
 
       <Route path='*' element={<NotFound/>} />
