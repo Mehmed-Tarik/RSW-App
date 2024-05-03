@@ -1,4 +1,6 @@
 import { useLoaderData, Link  } from "react-router-dom"
+import CityCard from "../components/CityCard";
+import './CitiesList.scss'
 
 const CitiesList = () => {
     const cities = useLoaderData()
@@ -9,10 +11,10 @@ const CitiesList = () => {
             return <p>No cities found.</p>
         }
     return (
-        <div>
-            {cities.map(c => (
-                <Link to={c.cityName} key={c._id}>
-                    <p>{c.cityName}</p>
+        <div className="card-container">
+            {cities.map(city => (
+                <Link style={{textDecoration: 'none'}} to={city.cityName} key={city._id}>
+                    <CityCard city = { city }/>
                 </Link>
             ))}
         </div>

@@ -6,7 +6,9 @@ const OptionSection = ({ togglePicked, picked, sOption, title }) => {
 
     return (
         <QuizWrapper title={title}>
+            
             <div>
+                <p className="multipleSelect">( Multiple selections possible )</p>
                 { sOption.map(sl => (
                     <div className={`option-container ${picked.includes(sl) ? 'selected' : ''}`}
                     key={sl} 

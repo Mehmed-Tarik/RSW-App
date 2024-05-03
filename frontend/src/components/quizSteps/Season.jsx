@@ -1,12 +1,7 @@
-import { useState, useEffect } from "react"
 import { QuizWrapper } from '../QuizWrapper'
 import './Section.scss'
 
 const Season = ({ sOption, updateFields, title, quizData }) => {
-
-    useEffect(() => {
-        console.log(quizData);
-    }, [])
 
     const handleSelection = (value) => {
         updateFields({ fieldName: 'season', value: value });

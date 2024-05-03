@@ -35,7 +35,6 @@ const Quiz = () => {
         // FOR SINGLE OPTION
         function updateFields(fields) {
             const { fieldName, value } = fields;
-            console.log('tu sam');
             dispatch({ type: 'UPDATE_FIELD', field: fieldName, value });
         }
       
@@ -59,10 +58,10 @@ const Quiz = () => {
         const { steps, currentStepIndex, step, isFirstStep, isLastStep, back, next, goTo } =
     useMultistepForm([
         <Season sOption={season} quizData={quizData} updateFields={updateFields} title='which season would you prefer?' />,
-        <OptionSection sOption={journeyGoals} options={quizData?.options} 
-                picked={picked} togglePicked={togglePicked} title='What do you hope to achieve during your journey?'/>,
-        <OptionSection sOption={cityStuff} options={quizData?.options} 
-                picked={picked} togglePicked={togglePicked} title='My ideal city would have:'/>,
+        // <OptionSection sOption={journeyGoals} options={quizData?.options} 
+        //         picked={picked} togglePicked={togglePicked} title='What do you hope to achieve during your journey?'/>,
+        // <OptionSection sOption={cityStuff} options={quizData?.options} 
+        //         picked={picked} togglePicked={togglePicked} title='My ideal city would have:'/>,
         <OptionSection sOption={company} options={quizData?.options} 
                 picked={picked} togglePicked={togglePicked} title='You are traveling:'/>,
         <Population updateFields={updateFields} quizData={quizData} title='Size of a city:' />,
@@ -127,7 +126,7 @@ const Quiz = () => {
             { showResult && (
                 <div>
                     <QuizResult quizData={quizData} />
-                    <button className="quiz-button" onClick={() => { setShowResult(false); goTo(0); resetQuizData(); }} >Take a Quiz again</button>
+                    <button className="quiz-button" style={{marginTop: '20px'}} onClick={() => { setShowResult(false); goTo(0); resetQuizData(); }} >Take a Quiz again</button>
                 </div>
             )}
         </div>

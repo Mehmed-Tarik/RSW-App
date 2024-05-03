@@ -20,7 +20,56 @@ const getCity = async (req, res) => {
     console.log(city);
 }
 
+const getQuizResult = async (req,res) => {
+    try {
+        const { quizData } = req.body;
+        console.log(quizData);
+
+        const matchingCities = await City.aggregate([
+            {
+                $match: {
+                    bestSeason: { $in: [quizData.season]}
+                }
+            },
+            {
+                $match: {
+                    options: { $in: quizData.options }
+                }
+            },
+            {
+                $addFields: {
+                  matchingCount: {
+                    $size: {
+                      $setIntersection: ["$options", quizData.options]
+                    }
+                  }
+                }
+            },
+            {
+                $match: {
+                    $and: [
+                        { matchingCount: { $gte: 4 } }, // Include documents with 4 or more matches
+                        { population: { $lte: quizData.population } } // Include documents with population within range
+                    ]
+                }
+            },
+            {
+                $sort: { matchingCount: -1 }
+            },
+            {
+                $limit: 5
+            }
+        ])
+
+        res.status(200).json(matchingCities);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+}
+
 module.exports = {
     createCity,
-    getCity
+    getCity,
+    getQuizResult
 }

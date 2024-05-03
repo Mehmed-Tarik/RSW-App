@@ -23,17 +23,22 @@
     color: #fff;
     border: 2px solid var(--primary);
 }
+.multipleSelect {
+    margin-top: -25px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
 
 //----------------------------------------------
-.rating-container {
-    width: fit-content;
-    margin: 0 auto;
-}
+// .rating-container {
+//     width: fit-content;
+//     margin: 0 auto;
+// }
 .progress-container {
     display: flex;
     flex-direction: column;
     gap: 4vh;
-    width: 300px; /* Adjust width as needed */
+    width: 100%;
     margin: 10vh 0;
     label {
         font-weight: bold;
@@ -44,12 +49,17 @@
         flex-direction: row;
     }
     .progressOutput {
+        width: 20px;
         margin-left: 3vw;
         font-size: 17px; /* Adjust font size as needed */
         font-weight: bold;
         color: #fff; /* Text color */
         margin-top: -7px;
       }
+    p {
+        font-size: 19px;
+        font-weight: bold;
+    }
 }
 
   
@@ -83,6 +93,24 @@
 //----------------------------------------------
 
 /* Mobile Styles */
+
+@media (max-width: 420px) {
+    .progress-container {
+        .progress-inOut {
+            flex-direction: column;
+        }
+        .progressOutput {
+            font-size: 17px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: -17px;
+            margin-left: 0;
+            width: 100%;
+        }
+    } 
+}
+
 @media only screen and (max-width: 767px) {
     .option-container {
         font-size: 16px; 

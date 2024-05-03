@@ -18,8 +18,7 @@ export const quizReducer = (state, action) => {
 
 const QUIZ_DATA = {
     season: '',
-    populationMin: 0,
-    populationMax: 3645000,
+    population: 0,
     options: []
 }
 
