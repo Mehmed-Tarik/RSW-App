@@ -23,8 +23,9 @@ const getCity = async (req, res) => {
 const getQuizResult = async (req,res) => {
     try {
         const { quizData } = req.body;
-        console.log(quizData);
 
+        if(quizData.season === '') quizData.season = 'summer'
+        
         const matchingCities = await City.aggregate([
             {
                 $match: {

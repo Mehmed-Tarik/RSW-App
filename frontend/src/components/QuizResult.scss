@@ -30,7 +30,7 @@
     &-buttons {
         background-color: transparent;
         border: 2px solid var(--primary); 
-        color: #fff;
+        color: #000;
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
@@ -43,9 +43,8 @@
         min-width: 200px;
         transition: color 0.3s, border-color 0.3s;
         &:hover {
-            background-color: #C3070F; /* Darker Red */
-            transform: translateY(-2px); /* Move button up slightly on hover */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover for depth */
+            background-color: var(--primary); 
+            color: #fff;
         }
         &:first-of-type {
             margin-top: 20px;

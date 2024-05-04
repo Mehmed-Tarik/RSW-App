@@ -5,7 +5,7 @@ const LandingPage = () => {
     return(
         <div className="landingPage-conteiner">
             <h1>Ready for the next adventure?</h1>
-            <p>Take our quiz and discover your next epic adventure city destination!</p>
+            <p>Take our quiz and discover your next epic adventure destination!</p>
         </div>
     )
 }

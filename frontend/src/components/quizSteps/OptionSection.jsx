@@ -15,8 +15,8 @@ const OptionSection = ({ togglePicked, picked, sOption, title }) => {
                     onClick={() => togglePicked(sl)}
                     >
                         <div>
-                        <span>{sl}</span>
-                        <i className="material-icons">{picked.includes(sl) ? 'check_box' : 'check_box_outline_blank'}</i>
+                            <span>{sl}</span>
+                            <i className="material-icons">{picked.includes(sl) ? 'check_box' : 'check_box_outline_blank'}</i>
                         </div>
                     </div>
                     

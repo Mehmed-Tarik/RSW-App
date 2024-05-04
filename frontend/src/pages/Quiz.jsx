@@ -60,8 +60,8 @@ const Quiz = () => {
         <Season sOption={season} quizData={quizData} updateFields={updateFields} title='which season would you prefer?' />,
         // <OptionSection sOption={journeyGoals} options={quizData?.options} 
         //         picked={picked} togglePicked={togglePicked} title='What do you hope to achieve during your journey?'/>,
-        // <OptionSection sOption={cityStuff} options={quizData?.options} 
-        //         picked={picked} togglePicked={togglePicked} title='My ideal city would have:'/>,
+        <OptionSection sOption={cityStuff} options={quizData?.options} 
+                picked={picked} togglePicked={togglePicked} title='My ideal city would have:'/>,
         <OptionSection sOption={company} options={quizData?.options} 
                 picked={picked} togglePicked={togglePicked} title='You are traveling:'/>,
         <Population updateFields={updateFields} quizData={quizData} title='Size of a city:' />,
@@ -98,7 +98,7 @@ const Quiz = () => {
             { startQuiz && !showResult && (
             <form onSubmit={onSubmit}>
               <div className="progressBar">
-                  <div style={{ width: `${progress}%`, background: "#E50914", height: "4px" }}></div>
+                  <div style={{ width: `${progress}%`, background: "var(--primary)", height: "4px" }}></div>
               </div>
             {/* Current Step */}
             <>

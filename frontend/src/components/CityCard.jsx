@@ -5,12 +5,9 @@ const CityCard = ({ city }) => { // instead of doing (props)
 
     return (
         <div className="city-card">
-            <img className="city-card-img" src={`/src/assets/${city.cityName}.webp`} alt={city.cityName} />  
-            <div className="city-card-text">
-                <h3>{city.cityName}</h3>
-                <span>{city.population}</span>
-            </div>
-            <p className="btn">read more</p>
+            <img className="city-card-img" src={`/src/assets/${city.cityName}.webp`} alt={city.cityName} />
+            <h3 className="city-card-text cName">{city.cityName}</h3>
+            <p className="city-card-text lMore">Learn more about <span style={{color: '#000',textTransform: 'capitalize'}}>{city.cityName}</span></p>
         </div>
     )
 }
