@@ -1,5 +1,9 @@
 import { useLoaderData, Link  } from "react-router-dom"
+
+// components
 import CityCard from "../components/CityCard";
+
+// style
 import './CitiesList.scss'
 
 const CitiesList = () => {

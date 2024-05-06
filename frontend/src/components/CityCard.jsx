@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import './CityCard.scss'
 
-const CityCard = ({ city }) => { // instead of doing (props)
+const CityCard = ({ city }) => {
 
     return (
         <div className="city-card">

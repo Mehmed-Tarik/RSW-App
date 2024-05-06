@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 
-// Components
+// components
 import LandingPage from '../components/LandingPage'
-import QuizResult from "../components/QuizResult"
-    // Quiz Steps
+import QuizResult from "../components/quizResult/QuizResult"
+    // quiz Steps
     import OptionSection from '../components/quizSteps/OptionSection'
     import Season from '../components/quizSteps/Season'
     import Population from '../components/quizSteps/Population'
@@ -81,7 +81,7 @@ const Quiz = () => {
       useEffect(() => {
         setProgress(((currentStepIndex + 1) / steps.length) * 100);
         //window.scrollTo(0, 0);
-      }, [currentStepIndex, steps.length, quizData]);
+      }, [currentStepIndex, steps.length]);
 
       useEffect(() => {
         updateOptions(picked)

@@ -1,0 +1,38 @@
+.label {
+    margin-right: 20px;
+    font-size: 22px;
+    width: 200px;
+}
+.numBtn {
+    &-wrapper {
+        height: 40px;
+        min-width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border-radius: 12px;
+        background-color: var(--primary);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        span {
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    &-minus {
+        
+    }
+    &-num {
+        font-size: 27px !important;
+        border-right: 2px solid #03182be0;
+        border-left: 2px solid #03182be0;
+        pointer-events: none;
+    }
+    &-plus {
+
+    }
+}

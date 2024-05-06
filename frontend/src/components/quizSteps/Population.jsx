@@ -22,7 +22,6 @@ const Population = ({ updateFields, title, quizData }) => {
         const doesntMetter = () => {
             updateFields({ fieldName: `population`, value: 3645000 })
             setDoMetter(!doMetter)
-            console.log(doMetter);
         }
 
     return (

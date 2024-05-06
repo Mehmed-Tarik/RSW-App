@@ -20,6 +20,18 @@ const citySchema = new Schema({
   },
   options: {
     type: [String],
+  },
+  avgHotel: {
+    type: Number
+  },
+  avgHostel: {
+    type: Number
+  },
+  avgFood: {
+    type: Number
+  },
+  avgMuseum: {
+    type: Number
   }
 
 }, { timestamps: true }) 
