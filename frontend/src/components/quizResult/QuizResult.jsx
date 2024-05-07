@@ -63,7 +63,7 @@ const QuizResult = ({quizData}) => {
                 )}
                 </div>
             ) : (
-                <h2 style={{textAlign: 'center'}}>Sorry, No cities available</h2>
+                <h2 className="noCities">Sorry, No cities available</h2>
             )}
         </div>
     )

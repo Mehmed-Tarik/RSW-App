@@ -7,7 +7,7 @@ const NumberBtn = ({ number, setNumber ,labelText }) => {
     };
 
     return (
-        <div style={{display: 'flex', margin: '15px 0'}}>
+        <div className='numBtn-container'>
             <label className="label">{ labelText }</label>
             <div className="numBtn-wrapper">
                 <span className="numBtn-minus" onClick={() => handleNumberChange('decrement')}>-</span>

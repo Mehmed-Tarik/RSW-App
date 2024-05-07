@@ -1,11 +1,13 @@
 const express = require('express')
 const router = express.Router()
 
-const { createCity, getCity, getQuizResult } = require('../controllers/cityController')
+const { createCity, getCity, getCityDetail, getQuizResult } = require('../controllers/cityController')
+
+router.post('/', createCity)
 
 router.get('/', getCity)
 
-router.post('/', createCity)
+router.get('/:cityName', getCityDetail)
 
 router.post('/quizresult', getQuizResult)
 

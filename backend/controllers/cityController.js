@@ -18,9 +18,13 @@ const createCity = async (req,res) => {
 const getCity = async (req, res) => {
 
     const city = await City.find().sort({createdAt: -1})
-
     res.status(200).json(city)
-    console.log(city);
+}
+
+const getCityDetail = async (req, res) => {
+
+    const city = await City.find({cityName: req.params.cityName})
+    res.status(200).json(city)
 }
 
 const getQuizResult = async (req,res) => {
@@ -28,6 +32,7 @@ const getQuizResult = async (req,res) => {
         const { quizData } = req.body;
 
         if(quizData.season === '') quizData.season = 'summer'
+        if(quizData.population === 0) quizData.population = 3645000
         
         const matchingCities = await City.aggregate([
             {
@@ -75,5 +80,6 @@ const getQuizResult = async (req,res) => {
 module.exports = {
     createCity,
     getCity,
+    getCityDetail,
     getQuizResult
 }

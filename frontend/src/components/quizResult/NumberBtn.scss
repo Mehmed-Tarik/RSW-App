@@ -4,6 +4,10 @@
     width: 200px;
 }
 .numBtn {
+    &-container {
+        display: flex;
+        margin: 15px 0;
+    }
     &-wrapper {
         height: 40px;
         min-width: 160px;
@@ -23,16 +27,24 @@
             cursor: pointer;
         }
     }
-    &-minus {
-        
-    }
     &-num {
         font-size: 27px !important;
         border-right: 2px solid #03182be0;
         border-left: 2px solid #03182be0;
         pointer-events: none;
     }
-    &-plus {
+}
 
+@media (max-width: 600px) {
+    .label {
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+    .numBtn {
+        &-container {
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+        }
     }
 }

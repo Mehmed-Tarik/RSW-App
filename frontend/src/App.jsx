@@ -9,7 +9,7 @@ import Quiz from './pages/Quiz'
 import AboutUs from './pages/AboutUs'
 import CitiesList, { citiesLoader } from './pages/CitiesList'
 import NotFound from './pages/NotFound'
-import CityDetail from './pages/CityDetail'
+import CityDetail, { cityDetailLoader } from './pages/CityDetail'
 
 // style
 import './App.scss'
@@ -29,6 +29,7 @@ const router = createBrowserRouter(
         <Route 
           path=':cityName'
           element={<CityDetail />}
+          loader={cityDetailLoader}
           />
       </Route>
 

@@ -8,12 +8,10 @@ import './CitiesList.scss'
 
 const CitiesList = () => {
     const cities = useLoaderData()
-    console.log(cities);
 
-        // Add error handling for undefined or empty cities array
-        if (!cities || cities.length === 0) {
-            return <p>No cities found.</p>
-        }
+    if (!cities || cities.length === 0) {
+        return <p>No cities found.</p>
+    }
     return (
         <div className="card-container">
             {cities.map(city => (

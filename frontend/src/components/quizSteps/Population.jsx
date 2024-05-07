@@ -31,7 +31,7 @@ const Population = ({ updateFields, title, quizData }) => {
                     <div className="progress-inOut">
                         <input
                             id="progressInput"
-                            type="range" // Use range input type for a slider
+                            type="range"
                             min="0" 
                             max="3645000" 
                             value={population} 
@@ -42,7 +42,6 @@ const Population = ({ updateFields, title, quizData }) => {
                     <p>{cityType}</p>
 
                     <div className={`option-container ${doMetter ? 'selected' : ''}`}
-                    // key={sl} 
                     onClick={() => doesntMetter()}
                     >
                         <div>

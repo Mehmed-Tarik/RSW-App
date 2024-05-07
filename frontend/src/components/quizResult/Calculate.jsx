@@ -10,10 +10,10 @@ const Calculate = ({ city }) => {
 
     const [people, setPeople] = useState(1);
     const [days, setDays] = useState(1);
-    const [selectedOption, setSelectedOption] = useState('');
+    const [selectedOption, setSelectedOption] = useState('hotel');
+    const [cost, setCost] = useState(0)
 
     const handleNumberChange = (setter, action) => {
-        console.log("tu sam");
         setter(prevValue => {
             if (action === 'increment') {
                 return prevValue + 1;
@@ -28,25 +28,27 @@ const Calculate = ({ city }) => {
       setSelectedOption(event.target.value);
     };
 
-
-    useEffect(()=> {
-        console.log(city);
-        console.log(people);
-        console.log(days);
-    },[people, days])
+    const calculateCost = () => {
+        if(selectedOption === 'hotel') {
+            setCost((people*(city.avgHotel + city.avgFood + city.avgMuseum))*days)
+        } else {
+            setCost((people*(city.avgHostel + city.avgFood + city.avgMuseum))*days)
+        }
+    }
 
     return (
         <div className="calculate-container">
             <NumberBtn number={people} setNumber={(action) => handleNumberChange(setPeople, action)} labelText='Number of people: ' />
             <NumberBtn number={days} setNumber={(action) => handleNumberChange(setDays, action)} labelText='How many days:' />
             <div className="select-container">
-                <label htmlFor="select-option">Choose an option:</label>
+                <label className='select-label' htmlFor="select-option">Accommodations:</label>
                 <select id="select-option" value={selectedOption} onChange={handleSelectChange}>
-                    <option value="">Select...</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="hostel">Hostel</option>
                 </select>
             </div>
+            <button className='result-buttons' onClick={calculateCost}>Calculate</button>
+            <p className='resultNumber'>{cost} &euro;</p>
         </div>
     )
 }

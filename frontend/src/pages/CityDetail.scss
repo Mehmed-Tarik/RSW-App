@@ -1,0 +1,21 @@
+.cityDetail {
+    &-container {
+        // background-color: #00000057;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &-cityName {
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 30px;
+        color: #000;
+    }
+    &-population {
+        display: flex;
+        margin-bottom: 10px;
+        span {
+            display: block;
+            margin-right: 5px;
+        }
+    }
+}
