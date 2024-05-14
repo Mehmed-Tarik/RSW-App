@@ -27,17 +27,11 @@ const QuizResult = ({quizData}) => {
 
             if(response.ok){
                 setFetchedCities(json)
-                console.log(quizData);
             }
         }
 
         fetchCities()
     }, [])
-    
-    useEffect(() => {
-        console.log("Fetched Cities:", fetchedCities);
-    }, [fetchedCities]);
-    
 
     return(
         <div>

@@ -39,7 +39,6 @@ Architecture of project is based on MVC Architecture.
 - Needed improvements:
     - Adding more cities
     - Adding more Quiz options
-    - Designing and adding more features in City Detail page.
     - Creating Admin Panel
 
 

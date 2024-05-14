@@ -27,6 +27,9 @@ const citySchema = new Schema({
   avgHostel: {
     type: Number
   },
+  avgAirbnb: {
+    type: Number
+  },
   avgFood: {
     type: Number
   },

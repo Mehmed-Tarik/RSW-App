@@ -29,11 +29,21 @@ const Calculate = ({ city }) => {
     };
 
     const calculateCost = () => {
-        if(selectedOption === 'hotel') {
-            setCost((people*(city.avgHotel + city.avgFood + city.avgMuseum))*days)
-        } else {
-            setCost((people*(city.avgHostel + city.avgFood + city.avgMuseum))*days)
+        let accommodationCost = 0;
+        switch (selectedOption) {
+            case 'hotel':
+                accommodationCost = city.avgHotel;
+                break;
+            case 'hostel':
+                accommodationCost = city.avgHostel;
+                break;
+            case 'airbnb':
+                accommodationCost = city.avgAirbnb;
+                break;
+            default:
+                break;
         }
+        setCost((people * (accommodationCost + city.avgFood + city.avgMuseum)) * days);
     }
 
     return (
@@ -45,6 +55,7 @@ const Calculate = ({ city }) => {
                 <select id="select-option" value={selectedOption} onChange={handleSelectChange}>
                     <option value="hotel">Hotel</option>
                     <option value="hostel">Hostel</option>
+                    <option value="airbnb">Airbnb</option>
                 </select>
             </div>
             <button className='result-buttons' onClick={calculateCost}>Calculate</button>

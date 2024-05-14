@@ -5,7 +5,7 @@
     padding: 12px;
     width: 70%;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s; 
     box-shadow: rgba(154, 153, 153, 0.16) 0px 3px 6px, rgba(154, 153, 153, 0.16) 0px 3px 6px;
     color: #000;
     border-color: #000;
@@ -17,8 +17,6 @@
     &:hover {
         background-color: var(--primaryHover);
         color: #fff;
-        //color: #fff;
-        //border: 2px solid transparent;
     }
 }
 .selected {
@@ -30,12 +28,7 @@
     margin-bottom: 15px;
     font-size: 18px;
 }
-
 //----------------------------------------------
-// .rating-container {
-//     width: fit-content;
-//     margin: 0 auto;
-// }
 .progress-container {
     display: flex;
     flex-direction: column;
@@ -53,9 +46,9 @@
     .progressOutput {
         width: 20px;
         margin-left: 3vw;
-        font-size: 17px; /* Adjust font size as needed */
+        font-size: 17px; 
         font-weight: bold;
-        color: #000; /* Text color */
+        color: #000; 
         margin-top: -7px;
       }
     p {

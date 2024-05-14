@@ -73,7 +73,6 @@ const Quiz = () => {
         e.preventDefault();
         if (!isLastStep) return next();
         setTimeout(() => {
-          console.log('Updated quizData:', quizData);
           setShowResult(true)
         }, 100); 
       }

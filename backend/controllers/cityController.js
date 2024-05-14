@@ -2,13 +2,13 @@ const City = require('../models/cityModel')
 const mongoose = require('mongoose')
 
 const createCity = async (req,res) => {
-    const {cityName, population, description, bestSeason, 
-           options, avgHotel, avgHostel, avgFood, avgMuseum } = req.body
+    const {cityName, population, description, bestSeason, options,
+           avgHotel, avgHostel, avgAirbnb, avgFood, avgMuseum } = req.body
     
 
     try {
-        const city = await City.create({cityName, population, description, bestSeason, 
-                                        options, avgHotel, avgHostel, avgFood, avgMuseum})
+        const city = await City.create({cityName, population, description, bestSeason, options, 
+                                         avgHotel, avgHostel, avgAirbnb, avgFood, avgMuseum})
         res.status(201).json(city)
     } catch (error) {
         res.status(400).json({ error: error.message })
